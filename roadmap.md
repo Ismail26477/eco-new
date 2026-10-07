@@ -1,0 +1,3 @@
+- [x] Replace the current logo asset with the newly uploaded Eco-Friendly Resources logo
+- [x] Apply the new mark to shared branding and key facility/product visuals
+- [x] Verify logo visibility, carousel, navigation scroll, and build health

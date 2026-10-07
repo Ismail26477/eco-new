@@ -1,0 +1,165 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 6px);
+  --radius-md: calc(var(--radius) - 3px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 6px);
+  --radius-2xl: calc(var(--radius) + 14px);
+  --radius-3xl: calc(var(--radius) + 22px);
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-scrim: var(--scrim);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-gold: var(--gold);
+  --color-sand: var(--sand);
+  --color-success: var(--success);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --shadow-soft: var(--shadow-soft);
+  --shadow-lift: var(--shadow-lift);
+}
+
+:root {
+  --radius: 1rem;
+  /* Brand palette — light cream + fresh green */
+  --background: oklch(0.987 0.012 96.4); /* #FDFBF2 */
+  --foreground: oklch(0.317 0.093 141.7); /* deep green ink */
+  --scrim: oklch(0.16 0 0); /* neutral image overlay, no color cast */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.317 0.093 141.7);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.317 0.093 141.7);
+  --primary: oklch(0.412 0.120 141.7); /* #1B5A14 */
+  --primary-foreground: oklch(0.987 0.012 96.4);
+  --secondary: oklch(0.926 0.055 99.5); /* #EFE8BE light yellow-green */
+  --secondary-foreground: oklch(0.412 0.120 141.7);
+  --muted: oklch(0.966 0.024 94.1); /* #F9F4E2 */
+  --muted-foreground: oklch(0.470 0.121 141.9 / 0.8);
+  --accent: oklch(0.588 0.127 141.1); /* #4E8F44 */
+  --accent-foreground: oklch(0.987 0.012 96.4);
+  --gold: oklch(0.526 0.126 141.5); /* leaf green highlight */
+  --sand: oklch(0.926 0.055 99.5);
+  --success: oklch(0.588 0.127 141.1);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.984 0.003 247.858);
+  --border: oklch(0.947 0.032 95.4); /* #F4EED6 */
+  --input: oklch(0.923 0.039 95.9);
+  --ring: oklch(0.588 0.127 141.1);
+
+  --gradient-gold: linear-gradient(
+    120deg,
+    oklch(0.588 0.127 141.1),
+    oklch(0.887 0.080 100.9)
+  );
+  --gradient-dark: linear-gradient(
+    135deg,
+    oklch(0.412 0.120 141.7),
+    oklch(0.470 0.121 141.9)
+  );
+  --shadow-soft: 0 10px 30px -20px oklch(0.412 0.120 141.7 / 0.28);
+  --shadow-lift: 0 24px 55px -32px oklch(0.412 0.120 141.7 / 0.35);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility container-x {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 84rem;
+  padding-inline: 1.25rem;
+  @media (min-width: 768px) {
+    padding-inline: 2.5rem;
+  }
+}
+
+@utility text-gradient-gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient-dark {
+  background-image: var(--gradient-dark);
+}
+
+@utility glass-card {
+  background-color: color-mix(in oklab, white 70%, transparent);
+  backdrop-filter: blur(14px);
+  border: 1px solid color-mix(in oklab, var(--border) 80%, transparent);
+}
+
+@utility card-lift {
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+@utility eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -22px, 0);
+  }
+}
+
+@utility float-slow {
+  animation: float-slow 9s ease-in-out infinite;
+}
