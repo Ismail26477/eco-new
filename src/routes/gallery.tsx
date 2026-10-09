@@ -7,6 +7,7 @@ import { CTASection } from "@/components/site/CTASection";
 import { PageBanner, SectionHeading } from "@/components/site/PageBanner";
 import { Reveal } from "@/components/site/Reveal";
 import { categories, company, images, products } from "@/data/site";
+import companyLogo from "@/assets/company-logo.png";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -96,13 +97,20 @@ function Gallery() {
                                 key={p.id}
                                 className="card-lift group relative flex flex-col overflow-hidden rounded-2xl border border-border bg-background"
                               >
-                                <div className="aspect-4/3 overflow-hidden bg-muted">
+                                <div className="relative aspect-4/3 overflow-hidden bg-muted">
                                   <img
                                     src={p.image}
                                     alt={p.name}
                                     loading="lazy"
                                     className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                                   />
+                                  <div className="absolute right-3 bottom-3 rounded-xl bg-white/95 px-3 py-2 shadow-lg ring-1 ring-black/5 backdrop-blur-sm">
+                                    <img
+                                      src={companyLogo}
+                                      alt="Eco-Friendly Resources Private Limited"
+                                      className="h-9 w-auto max-w-28 object-contain"
+                                    />
+                                  </div>
                                 </div>
                                 <div className="flex flex-1 flex-col p-6">
                                   <h3 className="font-display text-lg leading-snug text-primary">
