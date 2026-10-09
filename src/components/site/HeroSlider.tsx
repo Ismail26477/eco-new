@@ -24,7 +24,7 @@ export function HeroSlider() {
 
   return (
     <section
-      className="relative h-screen min-h-[560px] overflow-hidden bg-primary sm:min-h-[640px]"
+      className="relative h-screen min-h-[560px] overflow-hidden bg-black sm:min-h-[640px]"
       onMouseEnter={() => (paused.current = true)}
       onMouseLeave={() => (paused.current = false)}
     >
@@ -36,8 +36,8 @@ export function HeroSlider() {
           initial={{ x: dir > 0 ? "100%" : "-100%" }}
           animate={{ x: 0 }}
           exit={{ x: dir > 0 ? "-100%" : "100%" }}
-          transition={{ duration: 1, ease: [0.76, 0, 0.24, 1] }}
-          className="absolute inset-0"
+          transition={{ duration: 0.85, ease: "linear" }}
+          className="absolute inset-0 bg-black"
         >
           <img
             src={slide.image}
