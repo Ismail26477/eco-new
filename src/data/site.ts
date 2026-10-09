@@ -20,7 +20,14 @@ import catKids from "@/assets/cat-kids.jpg";
 import catBeverages from "@/assets/cat-beverages.jpg";
 import catOils from "@/assets/cat-oils.jpg";
 import catImmune from "@/assets/cat-immune.jpg";
-import brandLogo from "@/assets/eco-friendly-resources-logo-transparent.png";
+import brandLogo from "@/assets/brand-logo.png";
+import brandHeroProtein from "@/assets/brand-hero-protein.png";
+import brandHeroHerbs from "@/assets/brand-hero-herbs.png";
+import brandHeroBars from "@/assets/brand-hero-bars.png";
+import brandHeroFactory from "@/assets/brand-hero-factory.png";
+import brandHeroWellness from "@/assets/brand-hero-wellness.png";
+import brandHeroProducts from "@/assets/brand-hero-products.png";
+import brandHeroLab from "@/assets/brand-hero-lab.png";
 import proposedFacilityAsset from "@/assets/proposed-facility.jpg.asset.json";
 
 const proposedFacility = proposedFacilityAsset.url;
@@ -64,43 +71,43 @@ export const company = {
 
 export const heroSlides = [
   {
-    image: proteinPowder,
+    image: brandHeroProtein,
     eyebrow: "Protein & Sports Nutrition",
     title: "Whey, Plant Protein & Gainers, Made to Order",
     text: "Low-MOQ protein powder manufacturing with taste profiling, scoop-level accuracy and export-ready packaging.",
   },
   {
-    image: proteinBars,
+    image: brandHeroBars,
     eyebrow: "Healthy Foods",
     title: "Protein Bars Your Customers Come Back For",
     text: "20g protein bars, bites and snacks developed, baked and wrapped in our certified facility.",
   },
   {
-    image: supplementsShot,
+    image: brandHeroWellness,
     eyebrow: "Vitamins, Softgels & Gummies",
     title: "A Full Supplement Range Under One Roof",
     text: "Capsules, tablets, softgels, gummies and effervescents — formulated, tested and labelled for your brand.",
   },
   {
-    image: heroFactoryBranded,
+    image: brandHeroFactory,
     eyebrow: "WHO-GMP Certified Manufacturing",
     title: "India's Trusted Nutraceutical Manufacturer",
     text: "Two decades of contract manufacturing excellence — from formulation to finished, export-ready packaging.",
   },
   {
-    image: heroProducts,
+    image: brandHeroProducts,
     eyebrow: "Private Label & Third Party",
     title: "Your Brand. Our Craftsmanship.",
     text: "Launch a complete supplement range with bespoke formulations, packaging design and regulatory support.",
   },
   {
-    image: heroLabBranded,
+    image: brandHeroLab,
     eyebrow: "Research Driven",
     title: "Science That Earns Consumer Trust",
     text: "In-house R&D and NABL-grade quality testing at every stage of the production cycle.",
   },
   {
-    image: heroHerbs,
+    image: brandHeroHerbs,
     eyebrow: "Ayurveda Meets Modern Science",
     title: "Rooted in Herbs, Refined by Technology",
     text: "Standardised Ayurvedic extracts blended with clinically studied actives for measurable results.",
