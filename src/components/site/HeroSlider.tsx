@@ -42,11 +42,11 @@ export function HeroSlider() {
           <img
             src={slide.image}
             alt={slide.title}
-            className="h-full w-full object-cover object-center"
+            className="h-full w-full object-cover object-[center_42%] sm:object-center"
             width={1920}
             height={1080}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-scrim/85 via-scrim/50 to-scrim/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-scrim/60 via-scrim/30 to-scrim/5 sm:from-scrim/85 sm:via-scrim/50 sm:to-scrim/10" />
         </motion.div>
       </AnimatePresence>
 
